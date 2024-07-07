@@ -113,8 +113,8 @@ app.post("/pago", async (req, res) => {
   
       // Insertar en la tabla Pago_Tarjeta
       await db.execute(
-        'INSERT INTO Pago_Tarjeta (numero_tarjeta, fecha_expiracion, cvv, pago_id) VALUES (?, ?, ?, ?)',
-        ['1234', '12/25', '123', pagoId]
+        'INSERT INTO Pago_Tarjeta (numero_tarjeta, fecha_expiracion, cvv, pago_id) VALUES (123, CURDATE(), 123, ?)',
+        [pagoId]
       );
   
       // Verificar el estado del paymentIntent y enviar la respuesta correspondiente
