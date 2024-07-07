@@ -24,7 +24,7 @@ const options = {
       },
       servers: [
         {
-          url: "http://localhost:7000", // URL de tu servidor
+          url: "https://api-pagos.onrender.com", // URL de tu servidor
         },
       ],
     },
