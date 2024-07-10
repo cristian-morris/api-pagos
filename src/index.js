@@ -121,7 +121,8 @@ app.post("/pago", async (req, res) => {
       if (paymentIntent?.status !== 'completed') {
         return res.status(200).json({
           message: "Confirma tu pago",
-          client_secret: paymentIntent?.id, 
+          paymentIntentId: paymentIntent?.id, 
+          client_secret: paymentIntent?.client_secret,
           //client_secret o id
         });
       } else {
